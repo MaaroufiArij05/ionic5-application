@@ -12,8 +12,13 @@
       <ion-title size="large">My app</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
+  <div id="container" *ngIf="connected">
+    <p>you are connected</p>
+    <ion-button  [routerLink]="['/profile']" fill='outline' expand='block' color='success' (click)='logout()'>profile</ion-button>
+    
+    <ion-button fill='outline' expand='block' color='danger' (click)='logout()'>Logout</ion-button>
+  </div>
+  <div id="container" *ngIf="!connected">
     <strong>Ready to start</strong>
     <!-- <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
     <p>Your not logged in, you can start by :</p>

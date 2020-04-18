@@ -6,11 +6,15 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import { IonicStorageModule } from '@ionic/storage';
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    IonicStorageModule.forRoot(),
     RouterModule.forChild([
       {
         path: '',
